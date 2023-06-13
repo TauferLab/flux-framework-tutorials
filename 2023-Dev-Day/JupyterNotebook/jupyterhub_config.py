@@ -26,7 +26,7 @@ c.JupyterHub.hub_connect_ip = 'jupyterhub'
 
 # pick a docker image. This should have the same version of jupyterhub
 # in it as our Hub.
-c.DockerSpawner.image = 'your-spawner-image-name'
+c.DockerSpawner.image = 'dyad_dev_day_spawn'
 
 # tell the user containers to connect to our docker network
 c.DockerSpawner.network_name = 'jupyterhub'
