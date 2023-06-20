@@ -1,0 +1,3 @@
+#cmakedefine DYAD_API_STREAM
+#cmakedefine DYAD_API_WRAPPER
+#cmakedefine NEEDS_MPI

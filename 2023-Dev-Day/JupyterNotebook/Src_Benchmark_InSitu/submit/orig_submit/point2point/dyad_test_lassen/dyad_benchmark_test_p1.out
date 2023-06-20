@@ -1,0 +1,72 @@
+Checking for files on Flux ranks (before run)
+============================================
+
+Node 0: 0
+Node 1: 0
+-- Start consumer application
+LD_PRELOAD=/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_lassen_install/lib64/dyad_wrapper.so DYAD_KVS_NAMESPACE=dyad_pipeline1 DYAD_PATH_CONSUMER=/tmp/dyad_pipeline1 DYAD_DTL_MODE=UCX UCX_LOG_LEVEL=diag flux mini run --exclusive -N 1 /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_lassen_install/bin/pipeline1_consumer /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_lassen_install/libexec/compute.py analyze 10 -g 0 -c 10 -d /tmp/dyad_pipeline1
+-- Start producer application
+LD_PRELOAD=/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_lassen_install/lib64/dyad_wrapper.so DYAD_KVS_NAMESPACE=dyad_pipeline1 DYAD_PATH_PRODUCER=/tmp/dyad_pipeline1 DYAD_DTL_MODE=UCX UCX_LOG_LEVEL=diag flux mini run --exclusive -N 1 -n 1 /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_lassen_install/bin/pipeline1_producer /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_lassen_install/libexec/load.py extract_frame 10 200 0 -g 0 -c 10 -d /tmp/dyad_pipeline1
+-- Wait until all applications exit.
+logout
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@lassen710>
+Subject: Job 4748269: <dyad_benchmark_test_p1> in cluster <lassen> Exited
+
+Job <dyad_benchmark_test_p1> was submitted from host <lassen708> by user <lumsden1> in cluster <lassen> at Thu Apr 20 14:55:08 2023
+Job was executed on host(s) <1*lassen710>, in queue <pbatch>, as user <lumsden1> in cluster <lassen> at Thu Apr 20 14:55:11 2023
+                            <40*lassen615>
+                            <40*lassen629>
+</g/g90/lumsden1> was used as the home directory.
+</g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/submit/point2point/dyad_test_lassen> was used as the working directory.
+Started at Thu Apr 20 14:55:11 2023
+Terminated at Thu Apr 20 14:55:33 2023
+Results reported at Thu Apr 20 14:55:33 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -nnodes 2
+#BSUB -G guests
+#BSUB -J dyad_benchmark_test_p1
+#BSUB -o dyad_benchmark_test_p1.out
+#BSUB -e dyad_benchmark_test_p1.err
+#BSUB -W 1
+
+FLUX_STARTUP_ARGS="-o,-S,log-filename=$(pwd)/flux.log"
+
+module use /usr/tce/modulefiles/Core
+module use /usr/global/tools/flux/blueos_3_ppc64le_ib/modulefiles
+module load pmi-shim
+
+# PMIX_MCA_gds="^ds12,ds21" jsrun -a 1 -c ALL_CPUS -g ALL_GPUS -n 2 --smpiargs="-disable_gpu_hooks" flux start $FLUX_STARTUP_ARGS ./dyad.sh
+jsrun -a 1 -c ALL_CPUS -g ALL_GPUS -n 2 flux start $FLUX_STARTUP_ARGS ./dyad.sh
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.20 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   21 sec.
+    Turnaround time :                            25 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <dyad_benchmark_test_p1.err> for stderr output of this job.
+

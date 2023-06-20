@@ -1,0 +1,134 @@
+In dyad.sh
+Created /tmp/lumsden1/dyad_pipeline1/group0 on broker 0
+/tmp/lumsden1/dyad_pipeline1/group0 already exists on broker 0
+Created /tmp/lumsden1/dyad_pipeline1/group0 on broker 1
+Created /tmp/lumsden1/dyad_pipeline1/group0 on broker 1
+Checking for files on Flux ranks (before run)
+============================================
+
+Node 0: 0
+Node 1: 0
+-- Start consumer application
+LD_PRELOAD=/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/lib64/dyad_wrapper.so DYAD_KVS_NAMESPACE=dyad_pipeline1 DYAD_PATH_CONSUMER=/tmp/lumsden1/dyad_pipeline1 DYAD_DTL_MODE=UCX UCX_LOG_LEVEL=data flux mini run --exclusive -N 1 /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/bin/pipeline1_consumer /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/libexec/compute.py analyze 1 -g 0 -c 1 -d /tmp/lumsden1/dyad_pipeline1
+-- Start producer application
+LD_PRELOAD=/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/lib64/dyad_wrapper.so DYAD_KVS_NAMESPACE=dyad_pipeline1 DYAD_PATH_PRODUCER=/tmp/lumsden1/dyad_pipeline1 DYAD_DTL_MODE=UCX UCX_LOG_LEVEL=diag flux mini run --exclusive -N 1 -n 1 /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/bin/pipeline1_producer /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/libexec/load.py extract_frame 1 40 0 -g 0 -c 1 -d /tmp/lumsden1/dyad_pipeline1
+2023-05-02T15:07:11.334516Z broker.debug[1]: insmod connector-local
+2023-05-02T15:07:11.334585Z broker.info[1]: start: none->join 11.734ms
+2023-05-02T15:07:11.335036Z connector-local.debug[1]: allow-guest-user=false
+2023-05-02T15:07:11.335053Z connector-local.debug[1]: allow-root-owner=false
+2023-05-02T15:07:11.336444Z broker.debug[0]: insmod connector-local
+2023-05-02T15:07:11.336553Z broker.info[0]: start: none->join 12.3413ms
+2023-05-02T15:07:11.336575Z broker.debug[0]: overlay auth cert-name=1 OK
+2023-05-02T15:07:11.336607Z broker.info[0]: parent-none: join->init 0.047ms
+2023-05-02T15:07:11.337496Z broker.debug[0]: accepting connection from corona178 (rank 1) status full
+2023-05-02T15:07:11.337582Z broker.debug[1]: hello parent 0 cc5c3f0b-3423-4b34-afe7-6dd153d5349e
+2023-05-02T15:07:11.337628Z connector-local.debug[0]: allow-guest-user=false
+2023-05-02T15:07:11.337639Z connector-local.debug[0]: allow-root-owner=false
+2023-05-02T15:07:11.389494Z broker.debug[0]: insmod barrier
+2023-05-02T15:07:11.450806Z broker.debug[0]: insmod content-sqlite
+2023-05-02T15:07:11.451776Z content-sqlite.debug[0]: /var/tmp/lumsden1/flux-oWCZiV/content.sqlite (0 objects) journal_mode=OFF synchronous=OFF
+2023-05-02T15:07:11.451903Z broker.debug[0]: content backing store: enabled content-sqlite
+2023-05-02T15:07:11.492333Z broker.debug[0]: insmod kvs
+2023-05-02T15:07:11.526867Z broker.debug[0]: insmod kvs-watch
+2023-05-02T15:07:11.586447Z broker.debug[0]: insmod resource
+2023-05-02T15:07:11.935156Z resource.debug[0]: reslog_cb: resource-init event posted
+2023-05-02T15:07:11.935657Z resource.debug[0]: reslog_cb: resource-define event posted
+2023-05-02T15:07:11.971941Z broker.debug[0]: insmod cron
+2023-05-02T15:07:11.972327Z cron.info[0]: synchronizing cron tasks to event heartbeat.pulse
+2023-05-02T15:07:12.007237Z broker.debug[0]: insmod job-manager
+2023-05-02T15:07:12.007711Z job-manager.debug[0]: jobtap plugin .history registered method job-manager.history.get
+2023-05-02T15:07:12.007894Z job-manager.info[0]: restart: 0 jobs
+2023-05-02T15:07:12.007902Z job-manager.info[0]: restart: 0 running jobs
+2023-05-02T15:07:12.008095Z job-manager.info[0]: restart: checkpoint.job-manager not found
+2023-05-02T15:07:12.008102Z job-manager.debug[0]: restart: max_jobid=0
+2023-05-02T15:07:12.008156Z job-manager.debug[0]: duration-validator: updated expiration to 1683047231.00
+2023-05-02T15:07:12.045292Z broker.debug[0]: insmod job-info
+2023-05-02T15:07:12.077053Z broker.debug[0]: insmod job-list
+2023-05-02T15:07:12.077757Z job-list.debug[0]: job_state_init_from_kvs: read 0 jobs
+2023-05-02T15:07:12.149779Z broker.debug[0]: insmod job-ingest
+2023-05-02T15:07:12.150162Z job-ingest.debug[0]: configuring validator with plugins=(null), args=(null) (enabled)
+2023-05-02T15:07:12.150389Z job-ingest.debug[0]: fluid ts=1ms
+2023-05-02T15:07:12.181853Z broker.debug[0]: insmod job-exec
+2023-05-02T15:07:12.182183Z job-exec.debug[0]: using default shell path /usr/libexec/flux/flux-shell
+2023-05-02T15:07:12.218411Z broker.debug[0]: insmod heartbeat
+2023-05-02T15:07:12.220901Z broker.info[0]: rc1.0: running /etc/flux/rc1.d/01-flux-account-priority-update
+2023-05-02T15:07:12.362420Z broker.info[0]: rc1.0: running /etc/flux/rc1.d/01-sched-fluxion
+2023-05-02T15:07:12.692123Z broker.debug[0]: insmod sched-fluxion-resource
+2023-05-02T15:07:12.692511Z sched-fluxion-resource.info[0]: version 0.26.0
+2023-05-02T15:07:12.692575Z sched-fluxion-resource.debug[0]: mod_main: resource module starting
+2023-05-02T15:07:12.692919Z sched-fluxion-resource.warning[0]: create_reader: allowlist unsupported
+2023-05-02T15:07:12.693632Z sched-fluxion-resource.debug[0]: resource graph datastore loaded with rv1exec reader
+2023-05-02T15:07:12.693647Z sched-fluxion-resource.info[0]: populate_resource_db: loaded resources from core's resource.acquire
+2023-05-02T15:07:12.694091Z sched-fluxion-resource.debug[0]: resource status changed (rankset=[all] status=DOWN)
+2023-05-02T15:07:12.694101Z sched-fluxion-resource.debug[0]: mod_main: resource graph database loaded
+2023-05-02T15:07:12.742404Z broker.debug[0]: insmod sched-fluxion-qmanager
+2023-05-02T15:07:12.742888Z sched-fluxion-qmanager.info[0]: version 0.26.0
+2023-05-02T15:07:12.743026Z sched-fluxion-qmanager.debug[0]: service_register
+2023-05-02T15:07:12.743065Z sched-fluxion-qmanager.debug[0]: enforced policy (queue=default): fcfs
+2023-05-02T15:07:12.743073Z sched-fluxion-qmanager.debug[0]: effective queue params (queue=default): default
+2023-05-02T15:07:12.743079Z sched-fluxion-qmanager.debug[0]: effective policy params (queue=default): default
+2023-05-02T15:07:12.743405Z sched-fluxion-qmanager.debug[0]: handshaking with sched-fluxion-resource completed
+2023-05-02T15:07:12.743516Z job-manager.debug[0]: scheduler: hello
+2023-05-02T15:07:12.743676Z job-manager.debug[0]: scheduler: ready unlimited
+2023-05-02T15:07:12.743804Z sched-fluxion-qmanager.debug[0]: handshaking with job-manager completed
+2023-05-02T15:07:12.744717Z broker.info[0]: rc1.0: running /etc/flux/rc1.d/02-cron
+2023-05-02T15:07:12.941093Z broker.info[0]: rc1.0: /etc/flux/rc1 Exited (rc=0) 1.6s
+2023-05-02T15:07:12.941199Z broker.info[0]: rc1-success: init->quorum 1.60458s
+2023-05-02T15:07:12.941331Z broker.info[1]: parent-ready: join->init 1.60674s
+2023-05-02T15:07:12.974117Z connector-local.debug[1]: allow-guest-user=false
+2023-05-02T15:07:12.974125Z connector-local.debug[1]: allow-root-owner=false
+2023-05-02T15:07:12.974195Z broker.info[1]: configuration updated
+2023-05-02T15:07:13.004739Z broker.debug[1]: insmod barrier
+2023-05-02T15:07:13.041960Z broker.debug[0]: groups: broker.online=0
+2023-05-02T15:07:13.042113Z broker.info[0]: online: corona175 (ranks 0)
+2023-05-02T15:07:13.042801Z resource.debug[0]: reslog_cb: online event posted
+2023-05-02T15:07:13.042926Z sched-fluxion-resource.debug[0]: resource status changed (rankset=[0] status=UP)
+2023-05-02T15:07:13.046487Z broker.debug[1]: insmod kvs
+2023-05-02T15:07:13.080625Z broker.debug[1]: insmod kvs-watch
+2023-05-02T15:07:13.111881Z broker.debug[1]: insmod resource
+2023-05-02T15:07:13.494376Z broker.debug[1]: insmod job-info
+2023-05-02T15:07:13.538493Z broker.debug[1]: insmod job-ingest
+2023-05-02T15:07:13.538911Z job-ingest.debug[1]: configuring validator with plugins=(null), args=(null) (enabled)
+2023-05-02T15:07:13.539351Z job-ingest.debug[1]: fluid ts=1390ms
+2023-05-02T15:07:13.541301Z broker.info[1]: rc1.0: running /etc/flux/rc1.d/01-flux-account-priority-update
+2023-05-02T15:07:13.558387Z broker.info[1]: rc1.0: running /etc/flux/rc1.d/01-sched-fluxion
+2023-05-02T15:07:13.574815Z broker.info[1]: rc1.0: running /etc/flux/rc1.d/02-cron
+2023-05-02T15:07:13.618785Z broker.info[1]: rc1.0: /etc/flux/rc1 Exited (rc=0) 0.7s
+2023-05-02T15:07:13.618862Z broker.info[1]: rc1-success: init->quorum 0.677517s
+2023-05-02T15:07:13.819451Z broker.debug[0]: groups: broker.online=0-1
+2023-05-02T15:07:13.819564Z broker.info[0]: online: corona[175,178] (ranks 0-1)
+2023-05-02T15:07:13.819602Z broker.info[0]: quorum-full: quorum->run 0.878395s
+2023-05-02T15:07:13.821015Z broker.info[1]: quorum-full: quorum->run 0.202143s
+2023-05-02T15:07:13.821334Z resource.debug[0]: reslog_cb: online event posted
+2023-05-02T15:07:13.821489Z sched-fluxion-resource.debug[0]: resource status changed (rankset=[1] status=UP)
+2023-05-02T15:07:14.256103Z broker.debug[0]: insmod dyad
+2023-05-02T15:07:14.256483Z dyad.info[0]: Received 2 cmd line args
+2023-05-02T15:07:14.256500Z dyad.info[0]: DTL Mode (from cmd line) is UCX
+2023-05-02T15:07:14.256505Z dyad.info[0]: Initializing UCX DTL!
+2023-05-02T15:07:14.256507Z dyad.info[0]: Reading UCP config for DTL
+2023-05-02T15:07:14.256565Z dyad.info[0]: Initializing UCX
+2023-05-02T15:07:14.259958Z broker.debug[1]: insmod dyad
+2023-05-02T15:07:14.267726Z dyad.info[1]: Received 2 cmd line args
+2023-05-02T15:07:14.267763Z dyad.info[1]: DTL Mode (from cmd line) is UCX
+2023-05-02T15:07:14.267767Z dyad.info[1]: Initializing UCX DTL!
+2023-05-02T15:07:14.267770Z dyad.info[1]: Reading UCP config for DTL
+2023-05-02T15:07:14.267838Z dyad.info[1]: Initializing UCX
+2023-05-02T15:07:14.298669Z dyad.info[0]: Creating UCP worker
+2023-05-02T15:07:14.307811Z dyad.info[1]: Creating UCP worker
+2023-05-02T15:07:14.341622Z dyad.info[1]: UCX initialization successful
+2023-05-02T15:07:14.341677Z dyad.info[1]: dyad module begins using "/tmp/lumsden1/dyad_pipeline1"
+2023-05-02T15:07:14.348494Z dyad.info[0]: UCX initialization successful
+2023-05-02T15:07:14.348554Z dyad.info[0]: dyad module begins using "/tmp/lumsden1/dyad_pipeline1"
+2023-05-02T15:07:14.381123Z flux.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.384355Z flux.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.384361Z flux.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.384367Z flux.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.384371Z flux.info[0]: Reading UCP config
+2023-05-02T15:07:14.384422Z flux.info[0]: Initializing UCP
+2023-05-02T15:07:14.392569Z flux.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.392776Z flux.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.392783Z flux.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.392787Z flux.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.392791Z flux.info[0]: Reading UCP config
+2023-05-02T15:07:14.392847Z flux.info[0]: Initializing UCP
+-- Wait until all applications exit.

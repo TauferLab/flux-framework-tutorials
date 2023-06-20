@@ -42,6 +42,10 @@ RUN git clone https://github.com/TauferLab/dyad.git \
     && cd dyad \
     && git checkout dev-day-2023 \
     && cp -r use_cases/shuffle ../dl_shuffle \
+    && cp src/utils/read_all.c ../dl_shuffle \
+    && cp src/utils/read_all.h ../dl_shuffle \
+    && cp src/utils/utils.c ../dl_shuffle \
+    && cp src/utils/utils.h ../dl_shuffle \
     # Comments out the build cmds for DYAD because the insitu benchmark will build DYAD instead
     # && ./autogen.sh \
     # && ./configure --prefix=/usr CC=$(which gcc) CXX=$(which g++) \
@@ -63,17 +67,23 @@ RUN cd Src_Benchmark_InSitu \
     && cd ../../ \
     && sudo rm -rf Src_Benchmark_InSitu
 
-RUN cd dl_shuffle \
-    # && CC=$(which gcc) CXX=$(which g++) make all \
+COPY --chown=fluxuser:fluxuser Makefile .
+
+RUN mv Makefile dl_shuffle \
+    && cd dl_shuffle \
+    && make all \
+    && PREFIX=/usr sudo make install \
     && cd ..
 
 COPY --chown=fluxuser:fluxuser ecp23-flux-dyad.ipynb .
+COPY --chown=fluxuser:fluxuser dev-day-2023-dyad.ipynb .
 COPY --chown=fluxuser:fluxuser dyad_example1.svg .
 COPY --chown=fluxuser:fluxuser dyad_example2.svg .
 COPY --chown=fluxuser:fluxuser Flux-logo.svg .
+COPY --chown=fluxuser:fluxuser a4md_wflow.png .
 
 ENV SHELL=/usr/bin/bash
 ENV FLUX_URI_RESOLVE_LOCAL=t
 
 CMD PATH=$HOME/.local/bin:$PATH \
-    flux start --test-size=4 /home/fluxuser/.local/bin/jupyterhub-singleuser
+    flux start --test-size=4 -o,-S,log-filename=flux.log /home/fluxuser/.local/bin/jupyterhub-singleuser

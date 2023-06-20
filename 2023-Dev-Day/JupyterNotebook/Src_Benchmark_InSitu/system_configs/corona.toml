@@ -1,0 +1,29 @@
+[build]
+dtl = "dyad"
+build_type = "Release"
+CC = "/usr/tce/packages/gcc/gcc-10.3.1-magic/bin/gcc"
+CXX = "/usr/tce/packages/gcc/gcc-10.3.1-magic/bin/g++"
+FC = "/usr/tce/packages/gcc/gcc-10.3.1-magic/bin/gfortran"
+prefix = "./_corona_install"
+
+[build.extra_cmake_config]
+MPI_C_COMPILER = "/usr/tce/packages/mvapich2/mvapich2-2.3.6-gcc-10.3.1-magic/bin/mpicc"
+MPI_CXX_COMPILER = "/usr/tce/packages/mvapich2/mvapich2-2.3.6-gcc-10.3.1-magic/bin/mpicxx"
+MPI_Fortran_COMPILER = "/usr/tce/packages/mvapich2/mvapich2-2.3.6-gcc-10.3.1-magic/bin/mpifort"
+
+[dtl.dspaces]
+class_prefix = "DSpaces"
+file_prefix = "dspaces"
+cmake_target = "dspaces_dtl"
+needs_mpi = true
+
+[dtl.dyad]
+class_prefix = "Dyad"
+file_prefix = "dyad"
+cmake_target = "dyad_dtl"
+needs_mpi = false
+
+[[dtl.dyad.cmake_options]]
+"name" = "DYAD_GIT_TAG"
+"default_value" = "ucx"
+"description" = "The Git tag, branch name, etc. to use when checking out DYAD"

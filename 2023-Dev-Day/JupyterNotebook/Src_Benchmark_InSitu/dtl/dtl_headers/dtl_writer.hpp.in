@@ -1,0 +1,6 @@
+#ifndef __DTL_WRITER_HPP__
+#define __DTL_WRITER_HPP__
+
+#include "@dtl_writer_header@"
+
+#endif /* __DTL_WRITER_HPP__ */

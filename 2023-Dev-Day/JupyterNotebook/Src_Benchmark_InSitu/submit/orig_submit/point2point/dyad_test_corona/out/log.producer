@@ -1,0 +1,39 @@
+DYAD_CORE: Initializing with environment variables
+DYAD_CORE: retrieved configuration from environment. Now initializing DYAD
+Allocating UCX DTL handle
+Calling ucp_config_read
+Calling ucp_init
+Calling ucp_config_release
+Calling ucp_worker_create
+Calling ucp_worker_query
+DYAD_CORE: Initializing with environment variables
+[corona178:215747:0:215747] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x8)
+DYAD_CORE: retrieved configuration from environment. Now initializing DYAD
+==== backtrace (tid: 215747) ====
+ 0  /usr/lib64/libucs.so.0(ucs_handle_error+0x2dc) [0x1555527e5edc]
+ 1  /usr/lib64/libucs.so.0(+0x2b0bc) [0x1555527e60bc]
+ 2  /usr/lib64/libucs.so.0(+0x2b28a) [0x1555527e628a]
+ 3  /lib64/libc.so.6(+0x4eb80) [0x155552f5eb80]
+ 4  /lib64/libc.so.6(__libc_calloc+0x73) [0x155552fad7c3]
+ 5  /usr/lib64/flux/connectors/local.so(connector_init+0x2f) [0x15554ddfde0f]
+ 6  /usr/lib64/libflux-core.so.2(flux_open_ex+0x161) [0x15555211d541]
+ 7  /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/build/dyad/install/lib/libdyad_core.so.0(dyad_init+0x202) [0x1555553fdc59]
+ 8  /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/build/dyad/install/lib/libdyad_core.so.0(dyad_init_env+0x275) [0x1555553fe305]
+ 9  /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/lib64/dyad_wrapper.so(+0x12a9) [0x1555555462a9]
+10  /lib64/ld-linux-x86-64.so.2(+0x905a) [0x15555532f05a]
+11  /lib64/ld-linux-x86-64.so.2(+0x915a) [0x15555532f15a]
+12  /lib64/ld-linux-x86-64.so.2(+0x1d98a) [0x15555534398a]
+=================================
+flux-job: task(s) exited with exit code 139
+Checking if there is overlap between prefix and upath
+Create tmp strings on stack
+Calling realpath for prefix
+Calling realpath for path
+Since path isn't a realpath, calling cmp_prefix
+Calling extract_user_path
+Checking if there is overlap between prefix and upath
+Create tmp strings on stack
+Calling realpath for prefix
+Calling realpath for path
+Since path isn't a realpath, calling cmp_prefix
+Calling extract_user_path

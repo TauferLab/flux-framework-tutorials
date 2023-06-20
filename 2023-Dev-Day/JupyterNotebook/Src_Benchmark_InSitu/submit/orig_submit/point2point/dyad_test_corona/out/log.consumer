@@ -1,0 +1,274 @@
+[1683040034.377995] [corona175:216069:0]           debug.c:1147 UCX  DEBUG using signal stack 0x155555522000 size 141824
+[1683040034.392176] [corona175:216069:0]             cpu.c:339  UCX  DEBUG measured tsc frequency 2800.483 MHz after 0.75 ms
+[1683040034.392191] [corona175:216069:0]            init.c:119  UCX  DEBUG /usr/lib64/libucs.so.0 loaded at 0x155553068000
+[1683040034.392215] [corona175:216069:0]            init.c:120  UCX  DEBUG cmd line: flux mini run --exclusive -N 1 /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/bin/pipeline1_consumer /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/libexec/compute.py analyze 1 -g 0 -c 1 -d /tmp/lumsden1/dyad_pipeline1 
+[1683040034.392222] [corona175:216069:0]          module.c:72   UCX  DEBUG ucs library path: /usr/lib64/libucs.so.0
+[1683040034.392224] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for ucs
+DYAD_CORE: Initializing with environment variables
+DYAD_CORE: retrieved configuration from environment. Now initializing DYAD
+Allocating UCX DTL handle
+Calling ucp_config_read
+[1683040034.392832] [corona175:216069:0]            time.c:22   UCX  DEBUG arch clock frequency: 2800482758.62 Hz
+Calling ucp_init
+[1683040034.392864] [corona175:216069:0]     ucp_context.c:1849 UCX  INFO  Version 1.13.0 (loaded from /usr/lib64/libucp.so.0)
+[1683040034.392866] [corona175:216069:0]     ucp_context.c:1625 UCX  DEBUG estimated number of endpoints is 1
+[1683040034.392868] [corona175:216069:0]     ucp_context.c:1632 UCX  DEBUG estimated number of endpoints per node is 1
+[1683040034.392870] [corona175:216069:0]     ucp_context.c:1639 UCX  DEBUG estimated bcopy bandwidth is 5251268608.000000
+[1683040034.392873] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[0] is md 'sysv'
+[1683040034.392875] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[1] is md 'posix'
+[1683040034.392876] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[2] is 'huge'
+[1683040034.392877] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[3] is 'thp'
+[1683040034.392878] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[4] is md '*'
+[1683040034.392879] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[5] is 'mmap'
+[1683040034.392880] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[6] is 'heap'
+[1683040034.392884] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for uct
+[1683040034.394321] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for uct_ib
+[1683040034.394445] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md self because it has no selected transport resources
+[1683040034.396881] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md tcp because it has no selected transport resources
+[1683040034.396904] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md sysv because it has no selected transport resources
+[1683040034.396949] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md posix because it has no selected transport resources
+[1683040034.412459] [corona175:216069:0]       ib_device.c:628  UCX  DEBUG mlx5_0: PF sysfs path is '/sys/devices/pci0000:c0/0000:c0:03.1/0000:c4:00.0'
+[1683040034.412464] [corona175:216069:0]            topo.c:175  UCX  DEBUG added sys_dev 0 for bus id c4:00.0
+[1683040034.412466] [corona175:216069:0]       ib_device.c:658  UCX  DEBUG mlx5_0: bdf_name 0000:c4:00.0 sys_dev 0
+[1683040034.412492] [corona175:216069:0]       ib_device.c:683  UCX  DEBUG mlx5_0: vendor_id 0x15b3 device_id 4123
+[1683040034.412752] [corona175:216069:0]    ib_mlx5dv_md.c:713  UCX  DEBUG mlx5_0: disable ODP because it's not supported for DEVX QP
+[1683040034.412929] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x66a3c0 [id=8 ref 1] ???() to hash
+[1683040034.413012] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 8 events 0x1 mode thread_spinlock
+[1683040034.413014] [corona175:216069:0]       ib_device.c:848  UCX  DEBUG initialized device 'mlx5_0' (InfiniBand channel adapter) with 1 ports
+[1683040034.413114] [corona175:216069:0]           ib_md.c:1602 UCX  DEBUG mlx5_0: cuda GPUDirect RDMA is disabled
+[1683040034.413119] [corona175:216069:0]           ib_md.c:1602 UCX  DEBUG mlx5_0: rocm GPUDirect RDMA is enabled
+[1683040034.413122] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool rcache_mp: align 8, maxelems 4294967295, elemsize 144
+[1683040034.413138] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x6713f0 [id=12 ref 1] ???() to hash
+[1683040034.413144] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 12 events 0x1 mode thread_spinlock
+[1683040034.413250] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for ucm
+[1683040034.413253] [corona175:216069:0]           ib_md.c:1323 UCX  DEBUG mlx5_0: using registration cache
+[1683040034.413255] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool devx dbrec: align 64, maxelems 4294967295, elemsize 40
+[1683040034.413505] [corona175:216069:0]    ib_mlx5dv_md.c:1067 UCX  DEBUG mlx5_0: opened DEVX md
+[1683040034.413506] [corona175:216069:0]           ib_md.c:1550 UCX  DEBUG mlx5_0: md open by 'uct_ib_mlx5_devx_md_ops' is successful
+[1683040034.414859] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md cma because it has no selected transport resources
+[1683040034.414869] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool rcache_mp: align 8, maxelems 4294967295, elemsize 144
+[1683040034.414953] [corona175:216069:0]     ucp_context.c:1916 UCX  DEBUG created ucp context 0x67cb60 0x67cb60 [1 mds 1 tls] features 0x11 tl bitmap 0x1 0x0
+Calling ucp_config_release
+Calling ucp_worker_create
+[1683040034.415098] [corona175:216069:0]        ib_iface.c:888  UCX  DEBUG using pkey[0] 0xffff on mlx5_0:1/IB
+[1683040034.415812] [corona175:216069:0]        ib_iface.c:1537 UCX  DEBUG created uct_ib_iface_t headroom_ofs 12 payload_ofs 92 hdr_ofs 44 data_sz 4096
+[1683040034.416283] [corona175:216069:0]        ib_iface.c:1030 UCX  DEBUG iface=0x67a0c0: created UD QP 0x145b on mlx5_0:1 TX wr:341 sge:6 inl:124 resp:0 RX wr:4096 sge:1 resp:0
+[1683040034.416582] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ud_recv_skb: align 64, maxelems 4294967295, elemsize 4196
+[1683040034.416653] [corona175:216069:0]           mpool.c:237  UCX  DEBUG mpool rcache_mp: allocated chunk 0x15554f3b8008 of 151544 bytes with 1052 elements
+[1683040034.417169] [corona175:216069:0]           mpool.c:237  UCX  DEBUG mpool ud_recv_skb: allocated chunk 0x155555376018 of 544744 bytes with 128 elements
+[1683040034.417172] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ud_tx_skb: align 64, maxelems 4294967295, elemsize 4168
+[1683040034.417202] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80::c42:a103:5a:b068 to hash on device mlx5_0 port 1 index 0)
+[1683040034.417222] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80:: to hash on device mlx5_0 port 1 index 1)
+[1683040034.417240] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80:: to hash on device mlx5_0 port 1 index 2)
+[1683040034.417257] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80:: to hash on device mlx5_0 port 1 index 3)
+[1683040034.417275] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80:: to hash on device mlx5_0 port 1 index 4)
+[1683040034.417292] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80:: to hash on device mlx5_0 port 1 index 5)
+[1683040034.417310] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80:: to hash on device mlx5_0 port 1 index 6)
+[1683040034.417327] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x67a0c0: adding gid fe80:: to hash on device mlx5[1683040034.424692] [corona175:216069:0]           debug.c:1147 UCX  DEBUG using signal stack 0x155555522000 size 141824
+[1683040034.427126] [corona175:216069:0]             cpu.c:339  UCX  DEBUG measured tsc frequency 2799.837 MHz after 0.69 ms
+[1683040034.427139] [corona175:216069:0]            init.c:119  UCX  DEBUG /usr/lib64/libucs.so.0 loaded at 0x155553436000
+[1683040034.427158] [corona175:216069:0]            init.c:120  UCX  DEBUG cmd line: /usr/bin/python3 /usr/libexec/flux/cmd/flux-mini.py run --exclusive -N 1 /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/bin/pipeline1_consumer /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/libexec/compute.py analyze 1 -g 0 -c 1 -d /tmp/lumsden1/dyad_pipeline1 
+[1683040034.427167] [corona175:216069:0]          module.c:72   UCX  DEBUG ucs library path: /usr/lib64/libucs.so.0
+[1683040034.427169] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for ucs
+DYAD_CORE: Initializing with environment variables
+DYAD_CORE: retrieved configuration from environment. Now initializing DYAD
+Allocating UCX DTL handle
+Calling ucp_config_read
+[1683040034.437400] [corona175:216069:0]            time.c:22   UCX  DEBUG arch clock frequency: 2799837445.57 Hz
+Calling ucp_init
+[1683040034.437428] [corona175:216069:0]     ucp_context.c:1849 UCX  INFO  Version 1.13.0 (loaded from /usr/lib64/libucp.so.0)
+[1683040034.437430] [corona175:216069:0]     ucp_context.c:1625 UCX  DEBUG estimated number of endpoints is 1
+[1683040034.437431] [corona175:216069:0]     ucp_context.c:1632 UCX  DEBUG estimated number of endpoints per node is 1
+[1683040034.437433] [corona175:216069:0]     ucp_context.c:1639 UCX  DEBUG estimated bcopy bandwidth is 5251268608.000000
+[1683040034.437436] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[0] is md 'sysv'
+[1683040034.437437] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[1] is md 'posix'
+[1683040034.437438] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[2] is 'huge'
+[1683040034.437438] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[3] is 'thp'
+[1683040034.437439] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[4] is md '*'
+[1683040034.437440] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[5] is 'mmap'
+[1683040034.437441] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[6] is 'heap'
+[1683040034.437444] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for uct
+[1683040034.438672] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for uct_ib
+[1683040034.438792] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md self because it has no selected transport resources
+[1683040034.441255] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md tcp because it has no selected transport resources
+[1683040034.441278] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md sysv because it has no selected transport resources
+[1683040034.441315] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md posix because it has no selected transport resources
+[1683040034.445508] [corona175:216069:0]       ib_device.c:628  UCX  DEBUG mlx5_0: PF sysfs path is '/sys/devices/pci0000:c0/0000:c0:03.1/0000:c4:00.0'
+[1683040034.445514] [corona175:216069:0]            topo.c:175  UCX  DEBUG added sys_dev 0 for bus id c4:00.0
+[1683040034.445516] [corona175:216069:0]       ib_device.c:658  UCX  DEBUG mlx5_0: bdf_name 0000:c4:00.0 sys_dev 0
+[1683040034.445542] [corona175:216069:0]       ib_device.c:683  UCX  DEBUG mlx5_0: vendor_id 0x15b3 device_id 4123
+[1683040034.445802] [corona175:216069:0]    ib_mlx5dv_md.c:713  UCX  DEBUG mlx5_0: disable ODP because it's not supported for DEVX QP
+[1683040034.445975] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x555555774870 [id=15 ref 1] ???() to hash
+[1683040034.446054] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 15 events 0x1 mode thread_spinlock
+[1683040034.446056] [corona175:216069:0]       ib_device.c:848  UCX  DEBUG initialized device 'mlx5_0' (InfiniBand channel adapter) with 1 ports
+[1683040034.446151] [corona175:216069:0]           ib_md.c:1602 UCX  DEBUG mlx5_0: cuda GPUDirect RDMA is disabled
+[1683040034.446154] [corona175:216069:0]           ib_md.c:1602 UCX  DEBUG mlx5_0: rocm GPUDirect RDMA is enabled
+[1683040034.446158] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool rcache_mp: align 8, maxelems 4294967295, elemsize 144
+[1683040034.446173] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x5555557789d0 [id=19 ref 1] ???() to hash
+[1683040034.446180] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 19 events 0x1 mode thread_spinlock
+[1683040034.446278] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for ucm
+[1683040034.446280] [corona175:216069:0]           ib_md.c:1323 UCX  DEBUG mlx5_0: using registration cache
+[1683040034.446282] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool devx dbrec: align 64, maxelems 4294967295, elemsize 40
+[1683040034.446534] [corona175:216069:0]    ib_mlx5dv_md.c:1067 UCX  DEBUG mlx5_0: opened DEVX md
+[1683040034.446535] [corona175:216069:0]           ib_md.c:1550 UCX  DEBUG mlx5_0: md open by 'uct_ib_mlx5_devx_md_ops' is successful
+[1683040034.447833] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md cma because it has no selected transport resources
+[1683040034.447843] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool rcache_mp: align 8, maxelems 4294967295, elemsize 144
+[1683040034.447927] [corona175:216069:0]     ucp_context.c:1916 UCX  DEBUG created ucp context 0x555555784040 0x555555784040 [1 mds 1 tls] features 0x11 tl bitmap 0x1 0x0
+Calling ucp_config_release
+Calling ucp_worker_create
+[1683040034.448056] [corona175:216069:0]        ib_iface.c:888  UCX  DEBUG using pkey[0] 0xffff on mlx5_0:1/IB
+[1683040034.448754] [corona175:216069:0]        ib_iface.c:1537 UCX  DEBUG created uct_ib_iface_t headroom_ofs 12 payload_ofs 92 hdr_ofs 44 data_sz 4096
+[1683040034.449201] [corona175:216069:0]        ib_iface.c:1030 UCX  DEBUG iface=0x555555781390: created UD QP 0x145e on mlx5_0:1 TX wr:341 sge:6 inl:124 resp:0 RX wr:4096 sge:1 resp:0
+[1683040034.449489] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ud_recv_skb: align 64, maxelems 4294967295, elemsize 4196
+[1683040034.449550] [corona175:216069:0]           mpool.c:237  UCX  DEBUG mpool rcache_mp: allocated chunk 0x155555355008 of 151544 bytes with 1052 elements
+[1683040034.449997] [corona175:216069:0]           mpool.c:237  UCX  DEBUG mpool ud_recv_skb: allocated chunk 0x15555537a018 of 544744 bytes with 128 elements
+[1683040034.450000] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ud_tx_skb: align 64, maxelems 4294967295, elemsize 4168
+[1683040034.450026] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x555555781390: adding gid fe80::c42:a103:5a:b068 to hash on device mlx5_0 port 1 index 0)
+[1683040034.450044] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x555555781390: adding gid fe80:: to hash on device mlx5_0 port 1 index 1)
+[1683040034.450061] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x555555781390: adding gid fe80:: to hash on device mlx5_0 port 1 index 2)
+[1683040034.450078] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x555555781390: adding gid fe80:: to hash on device mlx5_0 port 1 index 3)
+[1683040034.450095] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x555555781390: adding gid fe80:: to hash on device mlx5_0 port 1 index 4)
+[1683040034.450112] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x555555781390: adding gid fe80:: to hash on device mlx5_0 port 1 index 5)
+[1683040034.450128] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x555555781390: adding gid fe80:: to hash on device mlx5_0 port 1 index 6)
+[1683040034.450[1683040034.792658] [corona175:216069:0]           debug.c:1147 UCX  DEBUG using signal stack 0x155555522000 size 141824
+[1683040034.807708] [corona175:216069:0]             cpu.c:339  UCX  DEBUG measured tsc frequency 2797.021 MHz after 0.28 ms
+[1683040034.807720] [corona175:216069:0]            init.c:119  UCX  DEBUG /usr/lib64/libucs.so.0 loaded at 0x155553068000
+[1683040034.807740] [corona175:216069:0]            init.c:120  UCX  DEBUG cmd line: flux-job attach f29Qeq8s 
+[1683040034.807747] [corona175:216069:0]          module.c:72   UCX  DEBUG ucs library path: /usr/lib64/libucs.so.0
+[1683040034.807749] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for ucs
+DYAD_CORE: Initializing with environment variables
+DYAD_CORE: retrieved configuration from environment. Now initializing DYAD
+Allocating UCX DTL handle
+Calling ucp_config_read
+[1683040034.808302] [corona175:216069:0]            time.c:22   UCX  DEBUG arch clock frequency: 2797021276.60 Hz
+Calling ucp_init
+[1683040034.808329] [corona175:216069:0]     ucp_context.c:1849 UCX  INFO  Version 1.13.0 (loaded from /usr/lib64/libucp.so.0)
+[1683040034.808331] [corona175:216069:0]     ucp_context.c:1625 UCX  DEBUG estimated number of endpoints is 1
+[1683040034.808332] [corona175:216069:0]     ucp_context.c:1632 UCX  DEBUG estimated number of endpoints per node is 1
+[1683040034.808334] [corona175:216069:0]     ucp_context.c:1639 UCX  DEBUG estimated bcopy bandwidth is 5251268608.000000
+[1683040034.808337] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[0] is md 'sysv'
+[1683040034.808338] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[1] is md 'posix'
+[1683040034.808339] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[2] is 'huge'
+[1683040034.808340] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[3] is 'thp'
+[1683040034.808341] [corona175:216069:0]     ucp_context.c:1705 UCX  DEBUG allocation method[4] is md '*'
+[1683040034.808341] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[5] is 'mmap'
+[1683040034.808342] [corona175:216069:0]     ucp_context.c:1717 UCX  DEBUG allocation method[6] is 'heap'
+[1683040034.808345] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for uct
+[1683040034.809710] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for uct_ib
+[1683040034.809827] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md self because it has no selected transport resources
+[1683040034.813159] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md tcp because it has no selected transport resources
+[1683040034.813183] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md sysv because it has no selected transport resources
+[1683040034.813221] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md posix because it has no selected transport resources
+[1683040034.817421] [corona175:216069:0]       ib_device.c:628  UCX  DEBUG mlx5_0: PF sysfs path is '/sys/devices/pci0000:c0/0000:c0:03.1/0000:c4:00.0'
+[1683040034.817426] [corona175:216069:0]            topo.c:175  UCX  DEBUG added sys_dev 0 for bus id c4:00.0
+[1683040034.817428] [corona175:216069:0]       ib_device.c:658  UCX  DEBUG mlx5_0: bdf_name 0000:c4:00.0 sys_dev 0
+[1683040034.817452] [corona175:216069:0]       ib_device.c:683  UCX  DEBUG mlx5_0: vendor_id 0x15b3 device_id 4123
+[1683040034.817712] [corona175:216069:0]    ib_mlx5dv_md.c:713  UCX  DEBUG mlx5_0: disable ODP because it's not supported for DEVX QP
+[1683040034.817890] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x64e3c0 [id=22 ref 1] ???() to hash
+[1683040034.817989] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 22 events 0x1 mode thread_spinlock
+[1683040034.817992] [corona175:216069:0]       ib_device.c:848  UCX  DEBUG initialized device 'mlx5_0' (InfiniBand channel adapter) with 1 ports
+[1683040034.818089] [corona175:216069:0]           ib_md.c:1602 UCX  DEBUG mlx5_0: cuda GPUDirect RDMA is disabled
+[1683040034.818093] [corona175:216069:0]           ib_md.c:1602 UCX  DEBUG mlx5_0: rocm GPUDirect RDMA is enabled
+[1683040034.818096] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool rcache_mp: align 8, maxelems 4294967295, elemsize 144
+[1683040034.818111] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x652520 [id=26 ref 1] ???() to hash
+[1683040034.818116] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 26 events 0x1 mode thread_spinlock
+[1683040034.818212] [corona175:216069:0]          module.c:280  UCX  DEBUG loading modules for ucm
+[1683040034.818214] [corona175:216069:0]           ib_md.c:1323 UCX  DEBUG mlx5_0: using registration cache
+[1683040034.818216] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool devx dbrec: align 64, maxelems 4294967295, elemsize 40
+[1683040034.818481] [corona175:216069:0]    ib_mlx5dv_md.c:1067 UCX  DEBUG mlx5_0: opened DEVX md
+[1683040034.818483] [corona175:216069:0]           ib_md.c:1550 UCX  DEBUG mlx5_0: md open by 'uct_ib_mlx5_devx_md_ops' is successful
+[1683040034.819808] [corona175:216069:0]     ucp_context.c:1363 UCX  DEBUG closing md cma because it has no selected transport resources
+[1683040034.819818] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool rcache_mp: align 8, maxelems 4294967295, elemsize 144
+[1683040034.819902] [corona175:216069:0]     ucp_context.c:1916 UCX  DEBUG created ucp context 0x660c90 0x660c90 [1 mds 1 tls] features 0x11 tl bitmap 0x1 0x0
+Calling ucp_config_release
+Calling ucp_worker_create
+[1683040034.820033] [corona175:216069:0]        ib_iface.c:888  UCX  DEBUG using pkey[0] 0xffff on mlx5_0:1/IB
+[1683040034.820891] [corona175:216069:0]        ib_iface.c:1537 UCX  DEBUG created uct_ib_iface_t headroom_ofs 12 payload_ofs 92 hdr_ofs 44 data_sz 4096
+[1683040034.821348] [corona175:216069:0]        ib_iface.c:1030 UCX  DEBUG iface=0x65f430: created UD QP 0x1463 on mlx5_0:1 TX wr:341 sge:6 inl:124 resp:0 RX wr:4096 sge:1 resp:0
+[1683040034.821632] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ud_recv_skb: align 64, maxelems 4294967295, elemsize 4196
+[1683040034.821691] [corona175:216069:0]           mpool.c:237  UCX  DEBUG mpool rcache_mp: allocated chunk 0x15554f3b8008 of 151544 bytes with 1052 elements
+[1683040034.822148] [corona175:216069:0]           mpool.c:237  UCX  DEBUG mpool ud_recv_skb: allocated chunk 0x155555376018 of 544744 bytes with 128 elements
+[1683040034.822151] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ud_tx_skb: align 64, maxelems 4294967295, elemsize 4168
+[1683040034.822179] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80::c42:a103:5a:b068 to hash on device mlx5_0 port 1 index 0)
+[1683040034.822199] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80:: to hash on device mlx5_0 port 1 index 1)
+[1683040034.822215] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80:: to hash on device mlx5_0 port 1 index 2)
+[1683040034.822231] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80:: to hash on device mlx5_0 port 1 index 3)
+[1683040034.822247] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80:: to hash on device mlx5_0 port 1 index 4)
+[1683040034.822263] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80:: to hash on device mlx5_0 port 1 index 5)
+[1683040034.822279] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80:: to hash on device mlx5_0 port 1 index 6)
+[1683040034.822295] [corona175:216069:0]        ud_iface.c:421  UCX  DEBUG iface 0x65f430: adding gid fe80:: to hash on device mlx5_0 port 1 index 7)
+[1683040034.822384] [corona175:216069:0]     timer_wheel.c:41   UCX  DEBUG high res timer created log=23 resolution=2999.121984 usec wanted: 2499.999932 usec
+[1683040034.822391] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x666070 [id=31 ref 1] ???() to hash
+[1683040034.822415] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 31 events 0x5 mode thread_spinlock
+[1683040034.822489] [corona175:216069:0]      ucp_worker.c:1310 UCX  DEBUG created interface[0]=0x65f430 using ud_verbs/mlx5_0:1 on worker 0x15555549f010
+[1683040034.822490] [corona175:216069:0]      ucp_worker.c:1113 UCX  DEBUG selected scalable tl bitmap: 0x1 0x0 (1 tls)
+[1683040034.822633] [corona175:216069:0]           async.c:231  UCX  DEBUG added async handler 0x64e5a0 [id=32 ref 1] ???() to hash
+[1683040034.822640] [corona175:216069:0]           async.c:509  UCX  DEBUG listening to async event fd 32 events 0x1 mode thread_spinlock
+[1683040034.822641] [corona175:216069:0]       rdmacm_cm.c:960  UCX  DEBUG created rdmacm_cm 0x65dd20 with event_channel 0x66d890 (fd=32)
+[1683040034.822650] [corona175:216069:0]      tcp_sockcm.c:222  UCX  DEBUG created tcp_sockcm 0x6755c0
+[1683040034.822652] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ucp_requests: align 64, maxelems 4294967295, elemsize 276
+[1683040034.822654] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ucp_rkeys: align 64, maxelems 4294967295, elemsize 104
+[1683040034.822655] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ucp_reg_bufs: align 64, maxelems 4294967295, elemsize 8216
+[1683040034.822656] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ucp_am_bufs: align 64, maxelems 4294967295, elemsize 153
+[1683040034.822657] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ucp_am_bufs: align 64, maxelems 4294967295, elemsize 1113
+[1683040034.822658] [corona175:216069:0]           mpool.c:100  UCX  DEBUG mpool ucp_am_bufs: align 64, maxelems 4294967295, elemsize 4177
+[1683040034.822659] [corona175:216069:0]       mpool_set.c:121  UCX  DEBUG mpool_set:ucp_am_bufs, sizes map 0x80000440, largest size 4088, mpools num 3
+[1683040034.822692] [corona175:216069:0]          parser.c:1918 UCX  INFO  UCX_* env variables: UCX_LOG_LEVEL=data UCX_TLS=ud_verbs
+Calling ucp_worker_query
+[1683040035.017116] [corona175:216081:0]           debug.c:1147 UCX  DEBUG using signal stack 0x155555432000 size 141824
+[corona175:216081:0:216081] Caught signal 11 (Segmentation fault: address not mapped to object at address 0x8)
+[1683040035.031358] [corona175:216081:0]             cpu.c:339  UCX  DEBUG measured tsc frequency 2798.603 MHz after 0.94 ms
+[1683040035.031374] [corona175:216081:0]            init.c:119  UCX  DEBUG /usr/lib64/libucs.so.0 loaded at 0x1555527bb000
+[1683040035.031396] [corona175:216081:0]            init.c:120  UCX  DEBUG cmd line: /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/bin/pipeline1_consumer /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/libexec/compute.py analyze 1 -g 0 -c 1 -d /tmp/lumsden1/dyad_pipeline1 
+[1683040035.031403] [corona175:216081:0]          module.c:72   UCX  DEBUG ucs library path: /usr/lib64/libucs.so.0
+==== backtrace (tid: 216081) ====
+[1683040035.031406] [corona175:216081:0]          module.c:280  UCX  DEBUG loading modules for ucs
+ 0  /usr/lib64/libucs.so.0(ucs_handle_error+0x2dc) [0x1555527e5edc]
+DYAD_CORE: Initializing with environment variables
+ 1  /usr/lib64/libucs.so.0(+0x2b0bc) [0x1555527e60bc]
+DYAD_CORE: retrieved configuration from environment. Now initializing DYAD
+ 2  /usr/lib64/libucs.so.0(+0x2b28a) [0x1555527e628a]
+ 3  /lib64/libc.so.6(+0x4eb80) [0x155552f5eb80]
+ 4  /lib64/libc.so.6(__libc_calloc+0x73) [0x155552fad7c3]
+ 5  /usr/lib64/flux/connectors/local.so(connector_init+0x2f) [0x15554ddfde0f]
+ 6  /usr/lib64/libflux-core.so.2(flux_open_ex+0x161) [0x15555211d541]
+ 7  /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/build/dyad/install/lib/libdyad_core.so.0(dyad_init+0x202) [0x155555400c59]
+ 8  /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/build/dyad/install/lib/libdyad_core.so.0(dyad_init_env+0x275) [0x155555401305]
+ 9  /g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_corona_install/lib64/dyad_wrapper.so(+0x12a9) [0x1555555462a9]
+10  /lib64/ld-linux-x86-64.so.2(+0x905a) [0x15555532f05a]
+11  /lib64/ld-linux-x86-64.so.2(+0x915a) [0x15555532f15a]
+12  /lib64/ld-linux-x86-64.so.2(+0x1d98a) [0x15555534398a]
+=================================
+flux-job: task(s) exited with exit code 139
+[1683040035.051153] [corona175:216069:0]      ucp_worker.c:2641 UCX  DEBUG destroy worker 0x15555549f010
+[1683040035.051156] [corona175:216069:0]      ucp_worker.c:2627 UCX  DEBUG worker 0x15555549f010: destroy all endpoints
+[1683040035.051157] [corona175:216069:0]      ucp_worker.c:2627 UCX  DEBUG worker 0x15555549f010: destroy internal endpoints
+[1683040035.051158] [corona175:216069:0]      ucp_worker.c:229  UCX  DEBUG worker 0x15555549f010: remove active message handlers
+[1683040035.051182] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ucp_reg_bufs destroyed
+[1683040035.051184] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ucp_am_bufs destroyed
+[1683040035.051185] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ucp_am_bufs destroyed
+[1683040035.051185] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ucp_am_bufs destroyed
+[1683040035.051186] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ucp_rkeys destroyed
+[1683040035.051187] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ucp_requests destroyed
+[1683040035.051189] [corona175:216069:0]           async.c:156  UCX  DEBUG removed async handler 0x64e5a0 [id=32 ref 1] ???() from hash
+[1683040035.051190] [corona175:216069:0]           async.c:562  UCX  DEBUG removing async handler 0x64e5a0 [id=32 ref 1] ???()
+[1683040035.051193] [corona175:216069:0]           async.c:171  UCX  DEBUG release async handler 0x64e5a0 [id=32 ref 0] ???()
+[1683040035.051209] [corona175:216069:0]           async.c:156  UCX  DEBUG removed async handler 0x666070 [id=31 ref 1] ???() from hash
+[1683040035.051210] [corona175:216069:0]           async.c:562  UCX  DEBUG removing async handler 0x666070 [id=31 ref 1] ???()
+[1683040035.051212] [corona175:216069:0]           async.c:171  UCX  DEBUG release async handler 0x666070 [id=31 ref 0] ???()
+[1683040035.051213] [corona175:216069:0]        ud_iface.c:639  UCX  DEBUG iface(0x65f430): cep cleanup
+[1683040035.051214] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ud_tx_skb destroyed
+[1683040035.051231] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool ud_recv_skb destroyed
+[1683040035.051934] [corona175:216069:0]        ud_iface.c:646  UCX  DEBUG iface(0x65f430): ptr_array cleanup
+[1683040035.052431] [corona175:216069:0]         pgtable.c:618  UCX  DEBUG purge empty page table
+[1683040035.052432] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool rcache_mp destroyed
+[1683040035.052442] [corona175:216069:0]           async.c:156  UCX  DEBUG removed async handler 0x652520 [id=26 ref 1] ???() from hash
+[1683040035.052443] [corona175:216069:0]           async.c:562  UCX  DEBUG removing async handler 0x652520 [id=26 ref 1] ???()
+[1683040035.052445] [corona175:216069:0]           async.c:171  UCX  DEBUG release async handler 0x652520 [id=26 ref 0] ???()
+[1683040035.052767] [corona175:216069:0]         pgtable.c:618  UCX  DEBUG purge empty page table
+[1683040035.052783] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool rcache_mp destroyed
+[1683040035.052902] [corona175:216069:0]           mpool.c:154  UCX  DEBUG mpool devx dbrec destroyed
+[1683040035.052968] [corona175:216069:0]       ib_device.c:866  UCX  DEBUG destroying ib device mlx5_0
+[1683040035.052969] [corona175:216069:0]           async.c:156  UCX  DEBUG removed async handler 0x64e3c0 [id=22 ref 1] ???() from hash
+[1683040035.052971] [corona175:216069:0]           async.c:562  UCX  DEBUG removing async handler 0x64e3c0 [id=22 ref 1] ???()
+[1683040035.053047] [corona175:216069:0]           async.c:171  UCX  DEBUG release async handler 0x64e3c0 [id=22 ref 0] ???()

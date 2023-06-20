@@ -1,0 +1,10 @@
+install_prefix = "/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_catalyst_install"
+out_dir = "/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/submit/basic_seq/catalyst/data_size_scaling/out/1280_atoms"
+nsteps = 1
+natoms = 1280
+
+[dtl]
+consumer_path = "/tmp/lumsden1/dyad_basic_sequential"
+producer_path = "/tmp/lumsden1/dyad_basic_sequential"
+kvs_namespace = "dyad_basic_sequential"
+dtl_mode = "UCX"

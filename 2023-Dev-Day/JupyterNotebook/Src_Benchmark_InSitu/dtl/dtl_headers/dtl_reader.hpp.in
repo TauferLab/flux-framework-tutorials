@@ -1,0 +1,6 @@
+#ifndef __DTL_READER_HPP__
+#define __DTL_READER_HPP__
+
+#include "@dtl_reader_header@"
+
+#endif /* __DTL_READER_HPP__ */

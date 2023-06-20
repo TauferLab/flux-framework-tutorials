@@ -1,0 +1,13 @@
+install_prefix = "/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/_lassen_install"
+out_dir = "/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/submit/basic_seq/lassen_test_out"
+natoms = 40
+
+[extra_envs]
+UCX_LOG_LEVEL="data"
+
+[dtl]
+api = "stream"
+consumer_path = "/tmp/lumsden1/dyad_basic_sequential"
+producer_path = "/tmp/lumsden1/dyad_basic_sequential"
+kvs_namespace = "dyad_basic_sequential"
+dtl_mode = "UCX"

@@ -1,0 +1,24 @@
+[build]
+dtl = "dyad"
+build_type = "Release"
+CC = "/usr/bin/gcc"
+CXX = "/usr/bin/g++"
+FC = "/usr/bin/gfortran"
+prefix = "./_test_install"
+
+[build.extra_cmake_config]
+MPI_C_COMPILER = "/usr/bin/mpicc"
+MPI_CXX_COMPILER = "/usr/bin/mpicxx"
+MPI_Fortran_COMPILER = "/usr/bin/mpifort"
+
+[dtl.dspaces]
+class_prefix = "DSpaces"
+file_prefix = "dspaces"
+cmake_target = "dspaces_dtl"
+needs_mpi = true
+
+[dtl.dyad]
+class_prefix = "Dyad"
+file_prefix = "dyad"
+cmake_target = "dyad_dtl"
+needs_mpi = false

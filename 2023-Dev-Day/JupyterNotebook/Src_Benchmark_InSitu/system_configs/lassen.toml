@@ -1,0 +1,34 @@
+[build]
+dtl = "dyad"
+build_type = "Release"
+CC = "/usr/tce/packages/gcc/gcc-8.3.1/bin/gcc"
+CXX = "/usr/tce/packages/gcc/gcc-8.3.1/bin/g++"
+FC = "/usr/tce/packages/gcc/gcc-8.3.1/bin/gfortran"
+prefix = "./_lassen_install"
+
+[build.extra_cmake_config]
+MPI_C_COMPILER = "/usr/global/tools/flux/blueos_3_ppc64le_ib/spectrum-mpi-2019.06.24/bin/mpicc"
+MPI_CXX_COMPILER = "/usr/global/tools/flux/blueos_3_ppc64le_ib/spectrum-mpi-2019.06.24/bin/mpicxx"
+MPI_Fortran_COMPILER = "/usr/global/tools/flux/blueos_3_ppc64le_ib/spectrum-mpi-2019.06.24/bin/mpif90"
+
+[dtl.dspaces]
+class_prefix = "DSpaces"
+file_prefix = "dspaces"
+cmake_target = "dspaces_dtl"
+needs_mpi = true
+
+[dtl.dyad]
+class_prefix = "Dyad"
+file_prefix = "dyad"
+cmake_target = "dyad_dtl"
+needs_mpi = false
+
+[[dtl.dyad.cmake_options]]
+"name" = "DYAD_GIT_TAG"
+"default_value" = "main"
+"description" = "The Git tag, branch name, etc. to use when checking out DYAD"
+
+[[dtl.dyad.cmake_options]]
+name = "DYAD_API"
+default_value = "stream"
+description = "The type of DYAD API to use when building. Can be either 'wrapper' or 'stream'"

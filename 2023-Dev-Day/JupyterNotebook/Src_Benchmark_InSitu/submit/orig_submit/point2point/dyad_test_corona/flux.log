@@ -1,0 +1,292 @@
+2023-05-02T15:07:11.336444Z broker.debug[0]: insmod connector-local
+2023-05-02T15:07:11.336553Z broker.info[0]: start: none->join 12.3413ms
+2023-05-02T15:07:11.336575Z broker.debug[0]: overlay auth cert-name=1 OK
+2023-05-02T15:07:11.336607Z broker.info[0]: parent-none: join->init 0.047ms
+2023-05-02T15:07:11.337496Z broker.debug[0]: accepting connection from corona178 (rank 1) status full
+2023-05-02T15:07:11.334516Z broker.debug[1]: insmod connector-local
+2023-05-02T15:07:11.334585Z broker.info[1]: start: none->join 11.734ms
+2023-05-02T15:07:11.335036Z connector-local.debug[1]: allow-guest-user=false
+2023-05-02T15:07:11.335053Z connector-local.debug[1]: allow-root-owner=false
+2023-05-02T15:07:11.337628Z connector-local.debug[0]: allow-guest-user=false
+2023-05-02T15:07:11.337639Z connector-local.debug[0]: allow-root-owner=false
+2023-05-02T15:07:11.337582Z broker.debug[1]: hello parent 0 cc5c3f0b-3423-4b34-afe7-6dd153d5349e
+2023-05-02T15:07:11.389494Z broker.debug[0]: insmod barrier
+2023-05-02T15:07:11.450806Z broker.debug[0]: insmod content-sqlite
+2023-05-02T15:07:11.451776Z content-sqlite.debug[0]: /var/tmp/lumsden1/flux-oWCZiV/content.sqlite (0 objects) journal_mode=OFF synchronous=OFF
+2023-05-02T15:07:11.451903Z broker.debug[0]: content backing store: enabled content-sqlite
+2023-05-02T15:07:11.492333Z broker.debug[0]: insmod kvs
+2023-05-02T15:07:11.526867Z broker.debug[0]: insmod kvs-watch
+2023-05-02T15:07:11.586447Z broker.debug[0]: insmod resource
+2023-05-02T15:07:11.935156Z resource.debug[0]: reslog_cb: resource-init event posted
+2023-05-02T15:07:11.935657Z resource.debug[0]: reslog_cb: resource-define event posted
+2023-05-02T15:07:11.971941Z broker.debug[0]: insmod cron
+2023-05-02T15:07:11.972327Z cron.info[0]: synchronizing cron tasks to event heartbeat.pulse
+2023-05-02T15:07:12.007237Z broker.debug[0]: insmod job-manager
+2023-05-02T15:07:12.007711Z job-manager.debug[0]: jobtap plugin .history registered method job-manager.history.get
+2023-05-02T15:07:12.007894Z job-manager.info[0]: restart: 0 jobs
+2023-05-02T15:07:12.007902Z job-manager.info[0]: restart: 0 running jobs
+2023-05-02T15:07:12.008095Z job-manager.info[0]: restart: checkpoint.job-manager not found
+2023-05-02T15:07:12.008102Z job-manager.debug[0]: restart: max_jobid=0
+2023-05-02T15:07:12.008156Z job-manager.debug[0]: duration-validator: updated expiration to 1683047231.00
+2023-05-02T15:07:12.045292Z broker.debug[0]: insmod job-info
+2023-05-02T15:07:12.077053Z broker.debug[0]: insmod job-list
+2023-05-02T15:07:12.077757Z job-list.debug[0]: job_state_init_from_kvs: read 0 jobs
+2023-05-02T15:07:12.149779Z broker.debug[0]: insmod job-ingest
+2023-05-02T15:07:12.150162Z job-ingest.debug[0]: configuring validator with plugins=(null), args=(null) (enabled)
+2023-05-02T15:07:12.150389Z job-ingest.debug[0]: fluid ts=1ms
+2023-05-02T15:07:12.181853Z broker.debug[0]: insmod job-exec
+2023-05-02T15:07:12.182183Z job-exec.debug[0]: using default shell path /usr/libexec/flux/flux-shell
+2023-05-02T15:07:12.218411Z broker.debug[0]: insmod heartbeat
+2023-05-02T15:07:12.220901Z broker.info[0]: rc1.0: running /etc/flux/rc1.d/01-flux-account-priority-update
+2023-05-02T15:07:12.362420Z broker.info[0]: rc1.0: running /etc/flux/rc1.d/01-sched-fluxion
+2023-05-02T15:07:12.692123Z broker.debug[0]: insmod sched-fluxion-resource
+2023-05-02T15:07:12.692511Z sched-fluxion-resource.info[0]: version 0.26.0
+2023-05-02T15:07:12.692575Z sched-fluxion-resource.debug[0]: mod_main: resource module starting
+2023-05-02T15:07:12.692919Z sched-fluxion-resource.warning[0]: create_reader: allowlist unsupported
+2023-05-02T15:07:12.693632Z sched-fluxion-resource.debug[0]: resource graph datastore loaded with rv1exec reader
+2023-05-02T15:07:12.693647Z sched-fluxion-resource.info[0]: populate_resource_db: loaded resources from core's resource.acquire
+2023-05-02T15:07:12.694091Z sched-fluxion-resource.debug[0]: resource status changed (rankset=[all] status=DOWN)
+2023-05-02T15:07:12.694101Z sched-fluxion-resource.debug[0]: mod_main: resource graph database loaded
+2023-05-02T15:07:12.742404Z broker.debug[0]: insmod sched-fluxion-qmanager
+2023-05-02T15:07:12.742888Z sched-fluxion-qmanager.info[0]: version 0.26.0
+2023-05-02T15:07:12.743026Z sched-fluxion-qmanager.debug[0]: service_register
+2023-05-02T15:07:12.743065Z sched-fluxion-qmanager.debug[0]: enforced policy (queue=default): fcfs
+2023-05-02T15:07:12.743073Z sched-fluxion-qmanager.debug[0]: effective queue params (queue=default): default
+2023-05-02T15:07:12.743079Z sched-fluxion-qmanager.debug[0]: effective policy params (queue=default): default
+2023-05-02T15:07:12.743405Z sched-fluxion-qmanager.debug[0]: handshaking with sched-fluxion-resource completed
+2023-05-02T15:07:12.743516Z job-manager.debug[0]: scheduler: hello
+2023-05-02T15:07:12.743676Z job-manager.debug[0]: scheduler: ready unlimited
+2023-05-02T15:07:12.743804Z sched-fluxion-qmanager.debug[0]: handshaking with job-manager completed
+2023-05-02T15:07:12.744717Z broker.info[0]: rc1.0: running /etc/flux/rc1.d/02-cron
+2023-05-02T15:07:12.941093Z broker.info[0]: rc1.0: /etc/flux/rc1 Exited (rc=0) 1.6s
+2023-05-02T15:07:12.941199Z broker.info[0]: rc1-success: init->quorum 1.60458s
+2023-05-02T15:07:12.941331Z broker.info[1]: parent-ready: join->init 1.60674s
+2023-05-02T15:07:12.974117Z connector-local.debug[1]: allow-guest-user=false
+2023-05-02T15:07:12.974125Z connector-local.debug[1]: allow-root-owner=false
+2023-05-02T15:07:12.974195Z broker.info[1]: configuration updated
+2023-05-02T15:07:13.004739Z broker.debug[1]: insmod barrier
+2023-05-02T15:07:13.041960Z broker.debug[0]: groups: broker.online=0
+2023-05-02T15:07:13.042113Z broker.info[0]: online: corona175 (ranks 0)
+2023-05-02T15:07:13.042801Z resource.debug[0]: reslog_cb: online event posted
+2023-05-02T15:07:13.042926Z sched-fluxion-resource.debug[0]: resource status changed (rankset=[0] status=UP)
+2023-05-02T15:07:13.046487Z broker.debug[1]: insmod kvs
+2023-05-02T15:07:13.080625Z broker.debug[1]: insmod kvs-watch
+2023-05-02T15:07:13.111881Z broker.debug[1]: insmod resource
+2023-05-02T15:07:13.494376Z broker.debug[1]: insmod job-info
+2023-05-02T15:07:13.538493Z broker.debug[1]: insmod job-ingest
+2023-05-02T15:07:13.538911Z job-ingest.debug[1]: configuring validator with plugins=(null), args=(null) (enabled)
+2023-05-02T15:07:13.539351Z job-ingest.debug[1]: fluid ts=1390ms
+2023-05-02T15:07:13.541301Z broker.info[1]: rc1.0: running /etc/flux/rc1.d/01-flux-account-priority-update
+2023-05-02T15:07:13.558387Z broker.info[1]: rc1.0: running /etc/flux/rc1.d/01-sched-fluxion
+2023-05-02T15:07:13.574815Z broker.info[1]: rc1.0: running /etc/flux/rc1.d/02-cron
+2023-05-02T15:07:13.618785Z broker.info[1]: rc1.0: /etc/flux/rc1 Exited (rc=0) 0.7s
+2023-05-02T15:07:13.618862Z broker.info[1]: rc1-success: init->quorum 0.677517s
+2023-05-02T15:07:13.819451Z broker.debug[0]: groups: broker.online=0-1
+2023-05-02T15:07:13.819564Z broker.info[0]: online: corona[175,178] (ranks 0-1)
+2023-05-02T15:07:13.819602Z broker.info[0]: quorum-full: quorum->run 0.878395s
+2023-05-02T15:07:13.821015Z broker.info[1]: quorum-full: quorum->run 0.202143s
+2023-05-02T15:07:13.821334Z resource.debug[0]: reslog_cb: online event posted
+2023-05-02T15:07:13.821489Z sched-fluxion-resource.debug[0]: resource status changed (rankset=[1] status=UP)
+2023-05-02T15:07:14.256103Z broker.debug[0]: insmod dyad
+2023-05-02T15:07:14.256483Z dyad.info[0]: Received 2 cmd line args
+2023-05-02T15:07:14.256500Z dyad.info[0]: DTL Mode (from cmd line) is UCX
+2023-05-02T15:07:14.256505Z dyad.info[0]: Initializing UCX DTL!
+2023-05-02T15:07:14.256507Z dyad.info[0]: Reading UCP config for DTL
+2023-05-02T15:07:14.256565Z dyad.info[0]: Initializing UCX
+2023-05-02T15:07:14.259958Z broker.debug[1]: insmod dyad
+2023-05-02T15:07:14.267726Z dyad.info[1]: Received 2 cmd line args
+2023-05-02T15:07:14.267763Z dyad.info[1]: DTL Mode (from cmd line) is UCX
+2023-05-02T15:07:14.267767Z dyad.info[1]: Initializing UCX DTL!
+2023-05-02T15:07:14.267770Z dyad.info[1]: Reading UCP config for DTL
+2023-05-02T15:07:14.267838Z dyad.info[1]: Initializing UCX
+2023-05-02T15:07:14.298669Z dyad.info[0]: Creating UCP worker
+2023-05-02T15:07:14.307811Z dyad.info[1]: Creating UCP worker
+2023-05-02T15:07:14.341622Z dyad.info[1]: UCX initialization successful
+2023-05-02T15:07:14.341677Z dyad.info[1]: dyad module begins using "/tmp/lumsden1/dyad_pipeline1"
+2023-05-02T15:07:14.348494Z dyad.info[0]: UCX initialization successful
+2023-05-02T15:07:14.348554Z dyad.info[0]: dyad module begins using "/tmp/lumsden1/dyad_pipeline1"
+2023-05-02T15:07:14.381123Z flux.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.384355Z flux.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.384361Z flux.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.384367Z flux.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.384371Z flux.info[0]: Reading UCP config
+2023-05-02T15:07:14.384422Z flux.info[0]: Initializing UCP
+2023-05-02T15:07:14.392569Z flux.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.392776Z flux.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.392783Z flux.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.392787Z flux.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.392791Z flux.info[0]: Reading UCP config
+2023-05-02T15:07:14.392847Z flux.info[0]: Initializing UCP
+2023-05-02T15:07:14.396969Z flux.info[0]: Creating UCP worker
+2023-05-02T15:07:14.399863Z flux.info[0]: Get address of UCP worker
+2023-05-02T15:07:14.399881Z flux.info[0]: DYAD_CORE: saving producer path
+2023-05-02T15:07:14.399886Z flux.info[0]: DYAD_CORE: saving consumer path
+2023-05-02T15:07:14.399891Z flux.info[0]: DYAD Initialized
+2023-05-02T15:07:14.399894Z flux.info[0]: DYAD_SYNC_DEBUG=false
+2023-05-02T15:07:14.399898Z flux.info[0]: DYAD_SYNC_CHECK=false
+2023-05-02T15:07:14.399901Z flux.info[0]: DYAD_KEY_DEPTH=3
+2023-05-02T15:07:14.399905Z flux.info[0]: DYAD_KEY_BINS=1024
+2023-05-02T15:07:14.414958Z flux.info[0]: Creating UCP worker
+2023-05-02T15:07:14.417793Z flux.info[0]: Get address of UCP worker
+2023-05-02T15:07:14.417809Z flux.info[0]: DYAD_CORE: saving producer path
+2023-05-02T15:07:14.417813Z flux.info[0]: DYAD_CORE: saving consumer path
+2023-05-02T15:07:14.417819Z flux.info[0]: DYAD Initialized
+2023-05-02T15:07:14.417822Z flux.info[0]: DYAD_SYNC_DEBUG=false
+2023-05-02T15:07:14.417826Z flux.info[0]: DYAD_SYNC_CHECK=false
+2023-05-02T15:07:14.417829Z flux.info[0]: DYAD_KEY_DEPTH=3
+2023-05-02T15:07:14.417832Z flux.info[0]: DYAD_KEY_BINS=1024
+2023-05-02T15:07:14.432442Z python3.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.432644Z python3.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.432650Z python3.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.432654Z python3.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.432659Z python3.info[0]: Reading UCP config
+2023-05-02T15:07:14.432707Z python3.info[0]: Initializing UCP
+2023-05-02T15:07:14.437195Z python3.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.437366Z python3.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.437371Z python3.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.437375Z python3.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.437378Z python3.info[0]: Reading UCP config
+2023-05-02T15:07:14.437414Z python3.info[0]: Initializing UCP
+2023-05-02T15:07:14.447932Z python3.info[0]: Creating UCP worker
+2023-05-02T15:07:14.450553Z python3.info[0]: Get address of UCP worker
+2023-05-02T15:07:14.450567Z python3.info[0]: DYAD_CORE: saving producer path
+2023-05-02T15:07:14.450571Z python3.info[0]: DYAD_CORE: saving consumer path
+2023-05-02T15:07:14.450575Z python3.info[0]: DYAD Initialized
+2023-05-02T15:07:14.450579Z python3.info[0]: DYAD_SYNC_DEBUG=false
+2023-05-02T15:07:14.450582Z python3.info[0]: DYAD_SYNC_CHECK=false
+2023-05-02T15:07:14.450585Z python3.info[0]: DYAD_KEY_DEPTH=3
+2023-05-02T15:07:14.450589Z python3.info[0]: DYAD_KEY_BINS=1024
+2023-05-02T15:07:14.454769Z python3.info[0]: Creating UCP worker
+2023-05-02T15:07:14.457442Z python3.info[0]: Get address of UCP worker
+2023-05-02T15:07:14.457456Z python3.info[0]: DYAD_CORE: saving producer path
+2023-05-02T15:07:14.457460Z python3.info[0]: DYAD_CORE: saving consumer path
+2023-05-02T15:07:14.457464Z python3.info[0]: DYAD Initialized
+2023-05-02T15:07:14.457467Z python3.info[0]: DYAD_SYNC_DEBUG=false
+2023-05-02T15:07:14.457471Z python3.info[0]: DYAD_SYNC_CHECK=false
+2023-05-02T15:07:14.457474Z python3.info[0]: DYAD_KEY_DEPTH=3
+2023-05-02T15:07:14.457478Z python3.info[0]: DYAD_KEY_BINS=1024
+2023-05-02T15:07:14.463189Z python3.info[0]: /usr/WS2/lumsden1/insitu_benchmark/Src_Benchmark_InSitu/submit/point2point/dyad_test_corona/out/log.producer is not in the Producer's managed path
+2023-05-02T15:07:14.463266Z python3.info[0]: /usr/WS2/lumsden1/insitu_benchmark/Src_Benchmark_InSitu/submit/point2point/dyad_test_corona/out/log.producer is not in the Producer's managed path
+2023-05-02T15:07:14.572146Z python3.info[0]: /etc/flux/security/conf.d/sign.toml is not in the Consumer's managed path
+2023-05-02T15:07:14.572173Z python3.info[0]: The KVS response is NULL! Skipping dyad_pull!
+2023-05-02T15:07:14.773393Z sched-fluxion-qmanager.debug[0]: alloc success (queue=default id=43570429952)
+2023-05-02T15:07:14.774380Z sched-fluxion-qmanager.debug[0]: alloc success (queue=default id=43587207168)
+2023-05-02T15:07:14.805762Z flux-job.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.805966Z flux-job.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.805972Z flux-job.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.805976Z flux-job.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.805981Z flux-job.info[0]: Reading UCP config
+2023-05-02T15:07:14.806036Z flux-job.info[0]: Initializing UCP
+2023-05-02T15:07:14.808094Z flux-job.info[0]: DYAD_CORE: getting Flux rank
+2023-05-02T15:07:14.808266Z flux-job.info[0]: DYAD_CORE: saving KVS namespace
+2023-05-02T15:07:14.808271Z flux-job.info[0]: DYAD_CORE: inintializing DYAD DTL
+2023-05-02T15:07:14.808275Z flux-job.info[0]: Initializing UCX DTL
+2023-05-02T15:07:14.808279Z flux-job.info[0]: Reading UCP config
+2023-05-02T15:07:14.808314Z flux-job.info[0]: Initializing UCP
+2023-05-02T15:07:14.819066Z flux-job.info[0]: Creating UCP worker
+2023-05-02T15:07:14.819907Z flux-job.info[0]: Creating UCP worker
+2023-05-02T15:07:14.821832Z flux-job.info[0]: Get address of UCP worker
+2023-05-02T15:07:14.821848Z flux-job.info[0]: DYAD_CORE: saving producer path
+2023-05-02T15:07:14.821852Z flux-job.info[0]: DYAD_CORE: saving consumer path
+2023-05-02T15:07:14.821857Z flux-job.info[0]: DYAD Initialized
+2023-05-02T15:07:14.821860Z flux-job.info[0]: DYAD_SYNC_DEBUG=false
+2023-05-02T15:07:14.821863Z flux-job.info[0]: DYAD_SYNC_CHECK=false
+2023-05-02T15:07:14.821867Z flux-job.info[0]: DYAD_KEY_DEPTH=3
+2023-05-02T15:07:14.821870Z flux-job.info[0]: DYAD_KEY_BINS=1024
+2023-05-02T15:07:14.822709Z flux-job.info[0]: Get address of UCP worker
+2023-05-02T15:07:14.822725Z flux-job.info[0]: DYAD_CORE: saving producer path
+2023-05-02T15:07:14.822729Z flux-job.info[0]: DYAD_CORE: saving consumer path
+2023-05-02T15:07:14.822733Z flux-job.info[0]: DYAD Initialized
+2023-05-02T15:07:14.822737Z flux-job.info[0]: DYAD_SYNC_DEBUG=false
+2023-05-02T15:07:14.822740Z flux-job.info[0]: DYAD_SYNC_CHECK=false
+2023-05-02T15:07:14.822743Z flux-job.info[0]: DYAD_KEY_DEPTH=3
+2023-05-02T15:07:14.822746Z flux-job.info[0]: DYAD_KEY_BINS=1024
+2023-05-02T15:07:15.041194Z sched-fluxion-qmanager.debug[0]: free succeeded (queue=default id=43587207168)
+2023-05-02T15:07:15.051131Z flux-job.info[0]: Finalizing UCX DTL
+2023-05-02T15:07:15.051139Z flux-job.info[0]: Releasing KVS Namespace
+2023-05-02T15:07:15.051143Z flux-job.info[0]: Releasing worker address
+2023-05-02T15:07:15.051147Z flux-job.info[0]: Releasing worker
+2023-05-02T15:07:15.052408Z flux-job.info[0]: Worker released
+2023-05-02T15:07:15.052418Z flux-job.info[0]: Releasing context
+2023-05-02T15:07:15.053422Z flux-job.info[0]: Releasing Flux handle
+2023-05-02T15:07:15.055778Z sched-fluxion-qmanager.debug[0]: free succeeded (queue=default id=43570429952)
+2023-05-02T15:07:15.065636Z flux-job.info[0]: Finalizing UCX DTL
+2023-05-02T15:07:15.065645Z flux-job.info[0]: Releasing KVS Namespace
+2023-05-02T15:07:15.065649Z flux-job.info[0]: Releasing worker address
+2023-05-02T15:07:15.065654Z flux-job.info[0]: Releasing worker
+2023-05-02T15:07:15.066679Z flux-job.info[0]: Worker released
+2023-05-02T15:07:15.066689Z flux-job.info[0]: Releasing context
+2023-05-02T15:07:15.066983Z flux-job.info[0]: pipe:[92612] is not in the Producer's managed path
+2023-05-02T15:07:15.067890Z flux-job.info[0]: pipe:[92609] is not in the Producer's managed path
+2023-05-02T15:07:15.068264Z flux-job.info[0]: Releasing Flux handle
+2023-05-02T15:07:15.070598Z broker.err[0]: rc2.0: ./dyad.sh Exited (rc=1) 1.2s
+2023-05-02T15:07:15.070661Z broker.info[0]: rc2-fail: run->cleanup 1.25105s
+2023-05-02T15:07:15.196343Z broker.info[0]: cleanup.0: flux queue stop --quiet --all --nocheckpoint Exited (rc=0) 0.1s
+2023-05-02T15:07:15.339869Z broker.info[0]: cleanup.1: flux cancel --user=all --quiet --states RUN Exited (rc=0) 0.1s
+2023-05-02T15:07:15.477184Z broker.info[0]: cleanup.2: flux queue idle --quiet Exited (rc=0) 0.1s
+2023-05-02T15:07:15.477238Z broker.info[0]: cleanup-success: cleanup->shutdown 0.406572s
+2023-05-02T15:07:15.477380Z broker.info[1]: shutdown: run->cleanup 1.65635s
+2023-05-02T15:07:15.477439Z broker.info[1]: cleanup-none: cleanup->shutdown 0.038099ms
+2023-05-02T15:07:15.477476Z broker.info[1]: children-none: shutdown->finalize 0.027559ms
+2023-05-02T15:07:15.498352Z broker.info[1]: rc3.0: running /etc/flux/rc3.d/01-sched-fluxion
+2023-05-02T15:07:15.539725Z broker.debug[1]: rmmod resource
+2023-05-02T15:07:15.539916Z broker.debug[1]: module resource exited
+2023-05-02T15:07:15.566287Z broker.debug[1]: rmmod job-info
+2023-05-02T15:07:15.566447Z broker.debug[1]: module job-info exited
+2023-05-02T15:07:15.591040Z broker.debug[1]: rmmod job-ingest
+2023-05-02T15:07:15.591322Z broker.debug[1]: module job-ingest exited
+2023-05-02T15:07:15.616560Z broker.debug[1]: rmmod barrier
+2023-05-02T15:07:15.616705Z broker.debug[1]: module barrier exited
+2023-05-02T15:07:15.641395Z broker.debug[1]: rmmod kvs-watch
+2023-05-02T15:07:15.641506Z broker.debug[1]: module kvs-watch exited
+2023-05-02T15:07:15.666040Z broker.debug[1]: rmmod kvs
+2023-05-02T15:07:15.666242Z broker.debug[1]: module kvs exited
+2023-05-02T15:07:15.695552Z broker.info[1]: rc3.0: /etc/flux/rc3 Exited (rc=0) 0.2s
+2023-05-02T15:07:15.695595Z broker.info[1]: rc3-success: finalize->goodbye 0.21811s
+2023-05-02T15:07:15.695638Z broker.info[1]: goodbye: goodbye->exit 0.03418ms
+2023-05-02T15:07:15.695680Z broker.debug[1]: rmmod connector-local
+2023-05-02T15:07:15.695797Z broker.debug[1]: module connector-local exited
+2023-05-02T15:07:15.696175Z broker.debug[1]: module dyad exited
+2023-05-02T15:07:15.696649Z broker.info[0]: children-complete: shutdown->finalize 0.219404s
+2023-05-02T15:07:15.717960Z broker.info[0]: rc3.0: running /etc/flux/rc3.d/01-sched-fluxion
+2023-05-02T15:07:15.761129Z broker.debug[0]: rmmod sched-fluxion-qmanager
+2023-05-02T15:07:15.761269Z sched-fluxion-qmanager.debug[0]: service_unregister
+2023-05-02T15:07:15.761444Z broker.debug[0]: module sched-fluxion-qmanager exited
+2023-05-02T15:07:15.761557Z job-manager.debug[0]: alloc: stop due to disconnect: Success
+2023-05-02T15:07:15.761557Z sched-fluxion-resource.debug[0]: disconnect_request_cb: a notify request aborted
+2023-05-02T15:07:15.787130Z broker.debug[0]: rmmod sched-fluxion-resource
+2023-05-02T15:07:15.787890Z broker.debug[0]: module sched-fluxion-resource exited
+2023-05-02T15:07:15.787963Z resource.debug[0]: aborted 1 resource.acquire(s)
+2023-05-02T15:07:15.797430Z broker.debug[0]: groups: broker.online=0
+2023-05-02T15:07:15.798053Z resource.debug[0]: reslog_cb: offline event posted
+2023-05-02T15:07:15.812833Z broker.debug[0]: rmmod heartbeat
+2023-05-02T15:07:15.813022Z broker.debug[0]: module heartbeat exited
+2023-05-02T15:07:15.862219Z broker.debug[0]: rmmod resource
+2023-05-02T15:07:15.862454Z broker.debug[0]: module resource exited
+2023-05-02T15:07:15.913448Z broker.debug[0]: rmmod job-exec
+2023-05-02T15:07:15.913640Z broker.debug[0]: module job-exec exited
+2023-05-02T15:07:15.938322Z broker.debug[0]: rmmod job-list
+2023-05-02T15:07:15.938474Z broker.debug[0]: module job-list exited
+2023-05-02T15:07:15.963731Z broker.debug[0]: rmmod job-info
+2023-05-02T15:07:15.963951Z broker.debug[0]: module job-info exited
+2023-05-02T15:07:15.988542Z broker.debug[0]: rmmod job-manager
+2023-05-02T15:07:15.989265Z broker.debug[0]: module job-manager exited
+2023-05-02T15:07:16.014217Z broker.debug[0]: rmmod job-ingest
+2023-05-02T15:07:16.029905Z broker.debug[0]: module job-ingest exited
+2023-05-02T15:07:16.054638Z broker.debug[0]: rmmod cron
+2023-05-02T15:07:16.054847Z broker.debug[0]: module cron exited
+2023-05-02T15:07:16.079715Z broker.debug[0]: rmmod barrier
+2023-05-02T15:07:16.079913Z broker.debug[0]: module barrier exited
+2023-05-02T15:07:16.134189Z broker.debug[0]: rmmod kvs-watch
+2023-05-02T15:07:16.134363Z broker.debug[0]: module kvs-watch exited
+2023-05-02T15:07:16.158964Z broker.debug[0]: rmmod kvs
+2023-05-02T15:07:16.159589Z broker.debug[0]: module kvs exited
+2023-05-02T15:07:16.243229Z broker.debug[0]: rmmod content-sqlite
+2023-05-02T15:07:16.243269Z broker.debug[0]: content backing store: disabled
+2023-05-02T15:07:16.243432Z broker.debug[0]: module content-sqlite exited
+2023-05-02T15:07:16.244708Z broker.info[0]: rc3.0: /etc/flux/rc3 Exited (rc=0) 0.5s
+2023-05-02T15:07:16.244744Z broker.info[0]: rc3-success: finalize->goodbye 0.548087s
+2023-05-02T15:07:16.244788Z broker.info[0]: goodbye: goodbye->exit 0.03909ms
+2023-05-02T15:07:16.244830Z broker.debug[0]: rmmod connector-local
+2023-05-02T15:07:16.244962Z broker.debug[0]: module connector-local exited
+2023-05-02T15:07:16.245445Z broker.debug[0]: module dyad exited

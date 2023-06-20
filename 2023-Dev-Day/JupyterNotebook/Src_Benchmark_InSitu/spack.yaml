@@ -1,0 +1,232 @@
+# This is a Spack Environment file.
+#
+# It describes a set of packages to be installed, along with
+# configuration settings.
+spack:
+  # add package specs to the `specs` list
+  specs: [mvapich2@2.3.1, cmake@3.23.1, boost@1.72.0, jansson, python@3.8.2, ucx+cma~cuda+dc+debug~examples+ib_hw_tm~java~knem+logging+optimizations+pic+rc~rdmacm~rocm+thread_multiple~ucg+ud+verbs+vfs
+      libs=shared opt=3 simd=auto]
+  view: /g/g90/lumsden1/ws/insitu_benchmark/_catalyst_spack_env/view
+  concretizer:
+    unify: true
+  compilers:
+  - compiler:
+      spec: gcc@8.1.0
+      paths:
+        cc: /usr/tce/packages/gcc/gcc-8.1.0/bin/gcc
+        cxx: /usr/tce/packages/gcc/gcc-8.1.0/bin/g++
+        f77: /usr/tce/packages/gcc/gcc-8.1.0/bin/gfortran
+        fc: /usr/tce/packages/gcc/gcc-8.1.0/bin/gfortran
+      flags: {}
+      operating_system: rhel7
+      target: x86_64
+      modules: []
+      environment: {}
+      extra_rpaths: []
+  packages:
+    pkg-config:
+      externals:
+      - spec: pkg-config@0.27.1
+        prefix: /usr
+    libfuse:
+      externals:
+      - spec: libfuse@3.6.1
+        prefix: /usr
+      buildable: false
+    hwloc:
+      externals:
+      - spec: hwloc@5.7.5
+        prefix: /usr
+      buildable: false
+    lua:
+      externals:
+      - spec: lua@5.1.4
+        prefix: /usr
+      buildable: false
+    flux-core:
+      externals:
+      - spec: flux-core@0.41.0 ^lua@5.1.4
+        prefix: /usr
+      buildable: false
+    jansson:
+      externals:
+      - spec: jansson@4.10
+        prefix: /usr
+      buildable: false
+    boost:
+      externals:
+      - spec: boost@1.72.0%gcc@8.1.0 +atomic +chrono +container +context +contract
+          +coroutine +date_time +exception +fiber +filesystem +graph +graph_parallel
+          +iostreams +locale +log +math +mpi +program_options +random +regex +serialization
+          +stacktrace +system +thread +timer +type_erasure +wave ^mvapich2@2.3.1%gcc@8.1.0
+        prefix: /usr/tce/packages/boost/boost-1.72.0-mvapich2-2.3-gcc-8.1.0
+    python:
+      externals:
+      - spec: python@2.7.5+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat+pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+        prefix: /usr
+      - spec: python@3.4.10+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat~pythoncmd+readline+sqlite3+ssl~tkinter+uuid+zlib
+        prefix: /usr
+      - spec: python@3.6.8+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+        prefix: /usr
+      - spec: python@2.7.16+bz2+crypt+ctypes+dbm~lzma+nis+pyexpat+pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+        prefix: /usr/tce
+      - spec: python@3.7.2+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+        prefix: /usr/tce
+      - spec: python@3.8.2+bz2+crypt+ctypes+dbm+lzma+nis+pyexpat~pythoncmd+readline+sqlite3+ssl+tix+tkinter+uuid+zlib
+        prefix: /usr/tce/packages/python/python-3.8.2
+      buildable: false
+    mvapich2:
+      externals:
+      - spec: mvapich2@2.3.1%gcc@8.1.0~cuda~debug~regcache~wrapperrpath ch3_rank_bits=32
+          file_systems=lustre,nfs,ufs process_managers=slurm
+        prefix: /usr/tce/packages/mvapich2/mvapich2-2.3-gcc-8.1.0
+      buildable: false
+    tar:
+      externals:
+      - spec: tar@1.26
+        prefix: /usr
+      buildable: false
+    swig:
+      externals:
+      - spec: swig@2.0.10
+        prefix: /usr
+      buildable: false
+    coreutils:
+      externals:
+      - spec: coreutils@8.22
+        prefix: /usr
+      buildable: false
+    m4:
+      externals:
+      - spec: m4@1.4.16
+        prefix: /usr
+      buildable: false
+    binutils:
+      externals:
+      - spec: binutils@2.27.44
+        prefix: /usr
+      buildable: false
+    bison:
+      externals:
+      - spec: bison@3.0.4
+        prefix: /usr
+      buildable: false
+    diffutils:
+      externals:
+      - spec: diffutils@3.3
+        prefix: /usr
+      buildable: false
+    curl:
+      externals:
+      - spec: curl@7.29.0+ldap
+        prefix: /usr
+      buildable: false
+    flex:
+      externals:
+      - spec: flex@2.5.37+lex
+        prefix: /usr
+      buildable: false
+    groff:
+      externals:
+      - spec: groff@1.22.2
+        prefix: /usr
+      buildable: false
+    libtool:
+      externals:
+      - spec: libtool@2.4.2
+        prefix: /usr
+      buildable: false
+    gawk:
+      externals:
+      - spec: gawk@4.0.2
+        prefix: /usr
+      buildable: false
+    ninja:
+      externals:
+      - spec: ninja@1.11.1.git.kitware.jobserver-1
+        prefix: /g/g90/lumsden1/.local
+      buildable: false
+    openssh:
+      externals:
+      - spec: openssh@7.4p1
+        prefix: /usr
+      buildable: false
+    doxygen:
+      externals:
+      - spec: doxygen@1.8.5+graphviz~mscgen
+        prefix: /usr
+      buildable: false
+    subversion:
+      externals:
+      - spec: subversion@1.7.14
+        prefix: /usr
+      buildable: false
+    findutils:
+      externals:
+      - spec: findutils@4.5.11
+        prefix: /usr
+      buildable: false
+    cvs:
+      externals:
+      - spec: cvs@1.11.23
+        prefix: /usr
+      buildable: false
+    autoconf:
+      externals:
+      - spec: autoconf@2.69
+        prefix: /usr
+      buildable: false
+    texinfo:
+      externals:
+      - spec: texinfo@5.1
+        prefix: /usr
+      buildable: false
+    git:
+      externals:
+      - spec: git@1.8.3.1+tcltk
+        prefix: /usr
+      - spec: git@2.29.1+tcltk
+        prefix: /usr/tce
+      buildable: false
+    automake:
+      externals:
+      - spec: automake@1.13.4
+        prefix: /usr
+      buildable: false
+    ccache:
+      externals:
+      - spec: ccache@3.7.7
+        prefix: /usr
+      buildable: false
+    gmake:
+      externals:
+      - spec: gmake@3.82
+        prefix: /usr
+      buildable: false
+    openssl:
+      externals:
+      - spec: openssl@1.0.2k-fips
+        prefix: /usr
+      buildable: false
+    git-lfs:
+      externals:
+      - spec: git-lfs@2.12.0
+        prefix: /usr/tce
+      buildable: false
+    cmake:
+      externals:
+      - spec: cmake@3.23.1
+        modules:
+        - cmake/3.23.1
+      buildable: false
+    meson:
+      externals:
+      - spec: meson@1.0.0
+        prefix: /g/g90/lumsden1/.local
+      - spec: meson@0.49.1
+        prefix: /usr/tce/packages/python/python-3.8.2
+      buildable: false
+    all:
+      compiler: [gcc@8.1.0]
+      providers:
+        mpi: [mvapich2]

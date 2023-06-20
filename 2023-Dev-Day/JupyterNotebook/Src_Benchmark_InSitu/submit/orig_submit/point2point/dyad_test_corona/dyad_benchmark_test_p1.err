@@ -1,0 +1,13 @@
+Unknown option: pty
+flux-start: /usr/libexec/flux/cmd/flux-broker -S log-filename=/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/submit/point2point/dyad_test_corona/flux.log ./dyad.sh
+flux-start: /usr/libexec/flux/cmd/flux-broker -S log-filename=/g/g90/lumsden1/ws/insitu_benchmark/Src_Benchmark_InSitu/submit/point2point/dyad_test_corona/flux.log ./dyad.sh
+0: Exit 1
+ls: cannot access '/tmp/lumsden1/dyad_pipeline1/group0': No such file or directory
+1: Exit 2
+dyad module begins using "/tmp/lumsden1/dyad_pipeline1"
+dyad module begins using "/tmp/lumsden1/dyad_pipeline1"
+2023-05-02T15:07:15.070598Z broker.err[0]: rc2.0: ./dyad.sh Exited (rc=1) 1.2s
+E: (flux-broker) 23-05-02 08:07:15 [215689]dangling 'PAIR' socket created at shmem.c:148
+E: (flux-broker) 23-05-02 08:07:16 [215951]dangling 'PAIR' socket created at shmem.c:148
+flux-job: task(s) exited with exit code 1
+2023-05-02T15:07:16.482196Z broker.err[0]: rc2.0: /var/tmp/lumsden1/jobtmp-0-fwaH1f5VJQ7/script Exited (rc=1) 5.8s
